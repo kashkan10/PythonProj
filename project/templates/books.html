@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+</head>
+<body>
+<h1>Список книг пользователя {{ User.name }} </h1>
+ {% if Books.count == 0 %}
+     <h2>Этот пользователь пока ничего не читает</h2>
+ {% endif %}
+ {% if Books.count > 0  %}
+ <table style="font: 25px arial;" cellspacing="2" border="1" cellpadding="5">
+        <tr>
+            <td>Название книги</td>
+            <td>Имя автора</td>
+        </tr>
+    {% for book in Books %}
+        <tr>
+            <td> <a href="/book/?idb={{book.id}}" >{{ book.name }}</a></td>
+            <td>{{book.author}}</td>
+        </tr>
+    {% endfor %}
+{% endif %}
+ </table>
+<form method="POST">
+     {% csrf_token %}
+<input type="submit" value="Добавить">
+</form>
+</body>
+</html>

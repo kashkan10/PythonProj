@@ -1,0 +1,18 @@
+[
+  {
+    "model": "library.User",
+    "pk": 1,
+    "fields": {
+      "name": "John",
+      "age": 21
+    }
+  },
+  {
+    "model": "library.User",
+    "pk": 2,
+    "fields": {
+      "name": "Paul",
+      "age": "22"
+    }
+  }
+]

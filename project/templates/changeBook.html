@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BookChange</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+<h1>Изменение книги</h1>
+        <p>
+            <label>Введите название</label><br>
+            <input type="text" name="name" value={{ Book.name }} />
+        </p>
+        <p>
+            <label>Введите автора</label><br>
+            <input type="text" name="author" value={{ Book.author }} />
+        </p>
+<input type="submit" value="Сохранить">
+</form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST">
+     {% csrf_token %}
+<h1>Добавление книги</h1>
+ <p>
+            <label>Введите название</label><br>
+            <input type="text" name="name" />
+        </p>
+        <p>
+            <label>Введите автора</label><br>
+            <input type="text" name="author"/>
+        </p>
+<input type="submit" value="Сохранить">
+</form>
+</body>
+</html>
