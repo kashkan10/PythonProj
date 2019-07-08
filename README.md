@@ -1,3 +1,3 @@
 # My first Python project
-##Django +
-##PostgreSQL +
+## Django +
+## PostgreSQL +
